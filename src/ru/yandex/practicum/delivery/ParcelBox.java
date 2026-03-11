@@ -14,8 +14,8 @@ public class ParcelBox<T extends Parcel> {
     }
 
 
-    public boolean addParcel (T parcel) {
-        if((currentWeight + parcel.getWeight()) <= maxWeight) {
+    public boolean addParcel(T parcel) {
+        if ((currentWeight + parcel.getWeight()) <= maxWeight) {
             box.add(parcel);
             currentWeight += parcel.getWeight();
             System.out.println("Посылка <<" + parcel.getDescription() + ">> добавлена!");

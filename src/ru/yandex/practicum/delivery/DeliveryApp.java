@@ -84,13 +84,13 @@ public class DeliveryApp {
                 System.out.println("Сколько дней может храниться посылка?");
                 int timeToLive = Integer.parseInt(scanner.nextLine());
                 PerishableParcel perishableParcel = new PerishableParcel(description, weight, deliveryAddress, sendDay, timeToLive);
-                if(perishableParcelBox.addParcel(perishableParcel)) {
+                if (perishableParcelBox.addParcel(perishableParcel)) {
                     allParcels.add(perishableParcel);
                 }
                 break;
             case 3:
                 FragileParcel fragileParcel = new FragileParcel(description, weight, deliveryAddress, sendDay);
-                if(fragileParcelBox.addParcel(fragileParcel)) {
+                if (fragileParcelBox.addParcel(fragileParcel)) {
                     allParcels.add(fragileParcel);
                     trackableParcels.add(fragileParcel);
                 }
@@ -129,7 +129,7 @@ public class DeliveryApp {
         }
         System.out.println("Введите новое местоположение");
         String newLocation = scanner.nextLine();
-        for(Trackable t : trackableParcels) {
+        for (Trackable t : trackableParcels) {
             t.reportStatus(newLocation);
         }
     }

@@ -2,6 +2,7 @@ package ru.yandex.practicum;
 
 import ru.yandex.practicum.delivery.*;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class FragileParcelTest {
